@@ -1,0 +1,228 @@
+2019-02-13 21:19:43.586 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-02-13 21:19:44.567 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-02-13 21:19:45.242 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-02-13 21:19:45.593 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action 用户管理.Controllers.HomeController.Index (用户管理)
+2019-02-13 21:19:45.617 +08:00 [INF] Executing action method 用户管理.Controllers.HomeController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:19:45.623 +08:00 [INF] logger
+2019-02-13 21:19:45.629 +08:00 [INF] Executed action method 用户管理.Controllers.HomeController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.5829ms.
+2019-02-13 21:19:45.700 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:19:46.192 +08:00 [INF] Executed ViewResult - view Index executed in 522.0698ms.
+2019-02-13 21:19:46.197 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:19:46.197 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validation/dist/jquery.validate.js  
+2019-02-13 21:19:46.201 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery/dist/jquery.js  
+2019-02-13 21:19:46.201 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-02-13 21:19:46.207 +08:00 [INF] Request finished in 10.6201ms 404 
+2019-02-13 21:19:46.213 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/css/site.css  
+2019-02-13 21:19:46.216 +08:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+2019-02-13 21:19:46.216 +08:00 [INF] Request finished in 19.4014ms 200 application/javascript
+2019-02-13 21:19:46.216 +08:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2019-02-13 21:19:46.220 +08:00 [INF] Request finished in 19.2933ms 200 application/javascript
+2019-02-13 21:19:46.220 +08:00 [INF] Executed action 用户管理.Controllers.HomeController.Index (用户管理) in 621.7573ms
+2019-02-13 21:19:46.224 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2019-02-13 21:19:46.226 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\js\site.js'
+2019-02-13 21:19:46.226 +08:00 [INF] Request finished in 2.0539ms 200 application/javascript
+2019-02-13 21:19:46.236 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\css\site.css'
+2019-02-13 21:19:46.241 +08:00 [INF] Request finished in 27.7525ms 200 text/css
+2019-02-13 21:19:46.247 +08:00 [INF] Request finished in 1007.9144ms 200 text/html; charset=utf-8
+2019-02-13 21:19:46.254 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\lib\jquery\dist\jquery.js'
+2019-02-13 21:19:46.254 +08:00 [INF] Request finished in 53.302ms 200 application/javascript
+2019-02-13 21:19:46.440 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:19:46.441 +08:00 [INF] Request finished in 0.5495ms 404 
+2019-02-13 21:19:54.549 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:19:54.558 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:19:54.571 +08:00 [INF] Authorization failed.
+2019-02-13 21:19:54.575 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-02-13 21:19:54.580 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-02-13 21:19:54.585 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2019-02-13 21:19:54.585 +08:00 [INF] Executed action 用户管理.Controllers.UserController.Index (用户管理) in 27.215600000000002ms
+2019-02-13 21:19:54.585 +08:00 [INF] Request finished in 36.5078ms 302 
+2019-02-13 21:19:54.588 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Account/Login?ReturnUrl=%2FUser  
+2019-02-13 21:19:54.594 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing action 用户管理.Controllers.AccountController.Login (用户管理)
+2019-02-13 21:19:54.595 +08:00 [INF] Executing action method 用户管理.Controllers.AccountController.Login (用户管理) - Validation state: "Valid"
+2019-02-13 21:19:54.596 +08:00 [INF] Executed action method 用户管理.Controllers.AccountController.Login (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.23090000000000002ms.
+2019-02-13 21:19:54.600 +08:00 [INF] Executing ViewResult, running view Login.
+2019-02-13 21:19:54.760 +08:00 [INF] Executed ViewResult - view Login executed in 163.5128ms.
+2019-02-13 21:19:54.760 +08:00 [INF] Executed action 用户管理.Controllers.AccountController.Login (用户管理) in 165.53480000000002ms
+2019-02-13 21:19:54.760 +08:00 [INF] Request finished in 172.5386ms 200 text/html; charset=utf-8
+2019-02-13 21:19:54.778 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:19:54.780 +08:00 [INF] Request finished in 2.3799ms 404 
+2019-02-13 21:19:54.806 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:19:54.807 +08:00 [INF] Request finished in 0.5143ms 404 
+2019-02-13 21:20:00.099 +08:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Account/Login application/x-www-form-urlencoded 226
+2019-02-13 21:20:00.120 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing action 用户管理.Controllers.AccountController.Login (用户管理)
+2019-02-13 21:20:00.166 +08:00 [INF] Executing action method 用户管理.Controllers.AccountController.Login (用户管理) with arguments (["用户管理.Models.UserLoginModel"]) - Validation state: "Valid"
+2019-02-13 21:20:00.420 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-02-13 21:20:01.707 +08:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[IDCard], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[Url], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-02-13 21:20:01.902 +08:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-02-13 21:20:01.981 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-02-13 21:20:02.003 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2019-02-13 21:20:02.028 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2019-02-13 21:20:02.033 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2019-02-13 21:20:02.035 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [AspNetRoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0
+2019-02-13 21:20:02.048 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-02-13 21:20:02.053 +08:00 [INF] Executed action method 用户管理.Controllers.AccountController.Login (用户管理), returned result Microsoft.AspNetCore.Mvc.RedirectToActionResult in 1886.7293000000002ms.
+2019-02-13 21:20:02.058 +08:00 [INF] Executing RedirectResult, redirecting to /.
+2019-02-13 21:20:02.059 +08:00 [INF] Executed action 用户管理.Controllers.AccountController.Login (用户管理) in 1938.8147000000001ms
+2019-02-13 21:20:02.059 +08:00 [INF] Request finished in 1960.017ms 302 
+2019-02-13 21:20:02.061 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-02-13 21:20:02.069 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action 用户管理.Controllers.HomeController.Index (用户管理)
+2019-02-13 21:20:02.070 +08:00 [INF] Executing action method 用户管理.Controllers.HomeController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:20:02.070 +08:00 [INF] logger
+2019-02-13 21:20:02.070 +08:00 [INF] Executed action method 用户管理.Controllers.HomeController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0907ms.
+2019-02-13 21:20:02.070 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:20:02.115 +08:00 [INF] Executed ViewResult - view Index executed in 45.1392ms.
+2019-02-13 21:20:02.115 +08:00 [INF] Executed action 用户管理.Controllers.HomeController.Index (用户管理) in 46.047900000000006ms
+2019-02-13 21:20:02.116 +08:00 [INF] Request finished in 54.2723ms 200 text/html; charset=utf-8
+2019-02-13 21:20:02.134 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:20:02.136 +08:00 [INF] Request finished in 2.012ms 404 
+2019-02-13 21:20:02.154 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:20:02.155 +08:00 [INF] Request finished in 1.0946ms 404 
+2019-02-13 21:20:04.693 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:20:04.694 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:20:04.696 +08:00 [INF] Authorization was successful.
+2019-02-13 21:20:04.696 +08:00 [INF] Executing action method 用户管理.Controllers.UserController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:20:07.884 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-02-13 21:20:07.934 +08:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IDCard], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[Url], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2019-02-13 21:20:09.844 +08:00 [INF] Executed action method 用户管理.Controllers.UserController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5147.7609ms.
+2019-02-13 21:20:09.848 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:20:10.439 +08:00 [INF] Executed ViewResult - view Index executed in 594.05680000000007ms.
+2019-02-13 21:20:10.439 +08:00 [INF] Executed action 用户管理.Controllers.UserController.Index (用户管理) in 5744.8925ms
+2019-02-13 21:20:10.440 +08:00 [INF] Request finished in 5746.8825ms 200 text/html; charset=utf-8
+2019-02-13 21:20:10.514 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:20:10.628 +08:00 [INF] Request finished in 114.7162ms 404 
+2019-02-13 21:20:14.408 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:20:14.409 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:20:14.409 +08:00 [INF] Authorization was successful.
+2019-02-13 21:20:14.409 +08:00 [INF] Executing action method 用户管理.Controllers.UserController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:20:18.330 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-02-13 21:20:18.363 +08:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IDCard], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[Url], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2019-02-13 21:27:29.503 +08:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-02-13 21:27:30.304 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-02-13 21:27:30.304 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-02-13 21:27:30.736 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/  
+2019-02-13 21:27:30.989 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing action 用户管理.Controllers.HomeController.Index (用户管理)
+2019-02-13 21:27:31.000 +08:00 [INF] Executing action method 用户管理.Controllers.HomeController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:27:31.004 +08:00 [INF] logger
+2019-02-13 21:27:31.009 +08:00 [INF] Executed action method 用户管理.Controllers.HomeController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8487ms.
+2019-02-13 21:27:31.037 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:27:31.447 +08:00 [INF] Executed ViewResult - view Index executed in 426.9698ms.
+2019-02-13 21:27:31.472 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:27:31.474 +08:00 [INF] Executed action 用户管理.Controllers.HomeController.Index (用户管理) in 484.7191ms
+2019-02-13 21:27:31.487 +08:00 [INF] Request finished in 14.7848ms 404 
+2019-02-13 21:27:31.494 +08:00 [INF] Request finished in 761.3961ms 200 text/html; charset=utf-8
+2019-02-13 21:27:31.578 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:27:31.579 +08:00 [INF] Request finished in 1.099ms 404 
+2019-02-13 21:27:31.596 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-02-13 21:27:31.608 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\favicon.ico'
+2019-02-13 21:27:31.608 +08:00 [INF] Request finished in 12.0977ms 200 image/x-icon
+2019-02-13 21:27:32.723 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:27:32.731 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:27:32.744 +08:00 [INF] Authorization was successful.
+2019-02-13 21:27:32.745 +08:00 [INF] Executing action method 用户管理.Controllers.UserController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:27:35.211 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-02-13 21:27:36.387 +08:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IDCard], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[Url], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2019-02-13 21:27:38.545 +08:00 [INF] Executed action method 用户管理.Controllers.UserController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 5800.3088000000007ms.
+2019-02-13 21:27:38.913 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:27:39.291 +08:00 [INF] Executed ViewResult - view Index executed in 380.83180000000004ms.
+2019-02-13 21:27:39.374 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:27:39.424 +08:00 [INF] Request finished in 36.2548ms 404 
+2019-02-13 21:27:39.468 +08:00 [INF] Executed action 用户管理.Controllers.UserController.Index (用户管理) in 6736.8837ms
+2019-02-13 21:27:39.736 +08:00 [INF] Request finished in 7013.0636ms 200 text/html; charset=utf-8
+2019-02-13 21:27:42.970 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:27:42.971 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:27:42.972 +08:00 [INF] Authorization was successful.
+2019-02-13 21:27:42.972 +08:00 [INF] Executing action method 用户管理.Controllers.UserController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:27:49.169 +08:00 [INF] Executed action method 用户管理.Controllers.UserController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 6196.8338ms.
+2019-02-13 21:27:49.533 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:27:49.758 +08:00 [INF] Executed ViewResult - view Index executed in 201.5145ms.
+2019-02-13 21:27:49.758 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:27:49.760 +08:00 [INF] Executed action 用户管理.Controllers.UserController.Index (用户管理) in 6788.4456ms
+2019-02-13 21:27:49.773 +08:00 [INF] Request finished in 15.0789ms 404 
+2019-02-13 21:27:49.940 +08:00 [INF] Request finished in 6969.9219ms 200 text/html; charset=utf-8
+2019-02-13 21:27:49.985 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-02-13 21:27:49.991 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\favicon.ico'
+2019-02-13 21:27:49.991 +08:00 [INF] Request finished in 6.0535ms 200 image/x-icon
+2019-02-13 21:27:57.596 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/User  
+2019-02-13 21:27:57.597 +08:00 [INF] Route matched with {action = "Index", controller = "User"}. Executing action 用户管理.Controllers.UserController.Index (用户管理)
+2019-02-13 21:27:57.597 +08:00 [INF] Authorization was successful.
+2019-02-13 21:27:57.598 +08:00 [INF] Executing action method 用户管理.Controllers.UserController.Index (用户管理) - Validation state: "Valid"
+2019-02-13 21:28:34.807 +08:00 [INF] Entity Framework Core 2.1.4-rtm-31024 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2019-02-13 21:28:34.809 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IDCard], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[Url], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+2019-02-13 21:28:34.810 +08:00 [INF] Executed action method 用户管理.Controllers.UserController.Index (用户管理), returned result Microsoft.AspNetCore.Mvc.ViewResult in 37211.6937ms.
+2019-02-13 21:28:34.810 +08:00 [INF] Executing ViewResult, running view Index.
+2019-02-13 21:28:34.951 +08:00 [INF] Executed ViewResult - view Index executed in 141.3003ms.
+2019-02-13 21:28:34.951 +08:00 [INF] Executed action 用户管理.Controllers.UserController.Index (用户管理) in 37353.9268ms
+2019-02-13 21:28:34.952 +08:00 [INF] Request finished in 37356.2219ms 200 text/html; charset=utf-8
+2019-02-13 21:28:34.964 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:28:34.967 +08:00 [INF] Request finished in 2.3953ms 404 
+2019-02-13 21:28:34.988 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.js  
+2019-02-13 21:28:34.990 +08:00 [INF] Request finished in 2.7731ms 404 
+2019-02-13 21:28:35.008 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-02-13 21:28:35.010 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\net core\FIrstDemo\用户管理\wwwroot\favicon.ico'
+2019-02-13 21:28:35.010 +08:00 [INF] Request finished in 1.5415ms 200 image/x-icon

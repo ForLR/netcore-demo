@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreModel</name>
+    </assembly>
+    <members>
+        <member name="P:CoreModel.Student.name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:CoreModel.Student.create_time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:CoreModel.Student.age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+    </members>
+</doc>

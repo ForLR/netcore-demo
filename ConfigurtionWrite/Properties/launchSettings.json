@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConfigurtionWrite": {
+      "commandName": "Project",
+      "commandLineArgs": "name=zhangsan age=21"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreApi</name>
+    </assembly>
+    <members>
+        <member name="M:CoreApi.Controllers.ValuesController.Get">
+            <summary>
+            GET api/values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoreApi.Controllers.ValuesController.xixi(CoreModel.Student)">
+            <summary>
+            注释
+            </summary>
+            <param name="student"></param>
+        </member>
+    </members>
+</doc>
