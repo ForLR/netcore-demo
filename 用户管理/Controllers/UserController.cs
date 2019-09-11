@@ -12,7 +12,7 @@ using 用户管理.Models;
 
 namespace 用户管理.Controllers
 {
-    [Authorize(Policy = "仅限lurui")]
+    //[Authorize(Policy = "仅限lurui")]
     public class UserController : Controller
     {
         private readonly UserManager<User> _user;

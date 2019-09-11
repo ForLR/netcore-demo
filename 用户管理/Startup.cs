@@ -33,6 +33,7 @@ namespace 用户管理
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
+             
             });
 
             //数据库
@@ -46,18 +47,25 @@ namespace 用户管理
                 option.Password.RequireLowercase = false;
                 option.Password.RequireUppercase = false;
                
-            }) .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddAuthentication().AddGoogle(x=> 
-            {
-                x.ClientId = "122";
-                x.ClientSecret = "qwe";
-            });
+
+            }).AddEntityFrameworkStores<ApplicationDbContext>();
+           
+            //services.AddAuthentication().AddGoogle(x=> 
+            //{
+            //    x.ClientId = "122";
+            //    x.ClientSecret = "qwe";
+            //});
             #region 授权
             services.AddAuthorization(option =>
             {
-            
-                option.AddPolicy("仅限lurui", policy => policy.RequireRole("lurui"));
+               
+                option.AddPolicy("仅限lurui", policy => 
+                {
+                    policy.RequireRole("lurui");
+                  
+
+                });
                 //option.AddPolicy("仅限Claims",policy=>policy.RequireClaim("Edit Albums"));
                 //option.AddPolicy("仅限Claims", policy => policy.RequireAssertion(context =>
                 //   {
@@ -65,7 +73,7 @@ namespace 用户管理
                 //           return true;
                 //       return false;
                 //   }));
-            
+                
             option.AddPolicy("仅限qq邮箱", policy => policy.AddRequirements
              (
                  new EmailRequirement("@qq.com")
@@ -80,7 +88,6 @@ namespace 用户管理
             // services.AddDbContext<UserContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddScoped<UserRepository>();
-          
             services.AddSingleton<IAuthorizationHandler, EmailHandler>();
             services.AddSingleton<IAuthorizationHandler, RoleHandler>();
         }
@@ -96,8 +103,9 @@ namespace 用户管理
             else
             {
                 app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
+                // app.UseHsts();
             }
+           
             //自定义日志配置
             loggerFactory.AddProvider(new ColoredConsoleLoggerProvider(new ColoredConsoleLoggerConfiguration()
             {
@@ -110,10 +118,10 @@ namespace 用户管理
                 Color = System.ConsoleColor.Yellow
             }));
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            
             app.UseAuthentication();
 
             app.UseMvc(routes =>
@@ -121,6 +129,7 @@ namespace 用户管理
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+              
             });
         }
     }

@@ -48,7 +48,7 @@ namespace 用户管理
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args).UseUrls("http://*:80")
             //.ConfigureLogging((hostingContext,logging)=> 
             //{
             //    logging.AddEventSourceLogger();
