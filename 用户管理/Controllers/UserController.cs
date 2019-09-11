@@ -46,6 +46,7 @@ namespace 用户管理.Controllers
         {
             return View();
         }
+
         [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> AddUser(UserAddModel addUser)
@@ -58,9 +59,12 @@ namespace 用户管理.Controllers
                 UserName = addUser.UserName,
                 Email = addUser.Email,
                 IDCard = addUser.IDCard,
-                Url=addUser.Url
+                Url=addUser.Url,
+                
+                
+
             };
-            var result = await _user.CreateAsync(user);
+            var result = await _user.CreateAsync(user,addUser.Password);
             if (result.Succeeded)
                 return RedirectToAction("Index");
             foreach (var item in result.Errors)
@@ -181,7 +185,8 @@ namespace 用户管理.Controllers
         }
 
         #region 服务端验证
-     
+        
+        [AllowAnonymous()]
         public async Task<IActionResult> UserNameExist([Bind("UserName")] string userName)
         {
             var user =await _user.FindByNameAsync(userName);

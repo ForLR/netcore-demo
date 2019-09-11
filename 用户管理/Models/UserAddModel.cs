@@ -25,7 +25,7 @@ namespace 用户管理.Models
 
         [Required]
         [Display(Name = "身份证号")]
-        [StringLength(18, MinimumLength = 18, ErrorMessage = "{0}的长度是{1}")]
+        //[StringLength(18, MinimumLength = 18, ErrorMessage = "{0}的长度是{1}")]
         public string IDCard { get; set; }
 
         [ValidataUrl(ErrorMessage = "Url不合规")]

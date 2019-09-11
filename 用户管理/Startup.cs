@@ -35,36 +35,45 @@ namespace 用户管理
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-            
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"))
-                    );
+            //数据库
+            services.AddDbContext<ApplicationDbContext>(options =>options.UseMySql( Configuration.GetConnectionString("DefaultConnection")) );
       
+
             services.AddIdentity<User,IdentityRole>(option=> 
             {
                 option.Password.RequiredLength = 1;
                 option.Password.RequireNonAlphanumeric = false;
                 option.Password.RequireLowercase = false;
                 option.Password.RequireUppercase = false;
+               
             }) .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddAuthentication().AddGoogle(x=> 
+            {
+                x.ClientId = "122";
+                x.ClientSecret = "qwe";
+            });
+            #region 授权
             services.AddAuthorization(option =>
             {
+            
                 option.AddPolicy("仅限lurui", policy => policy.RequireRole("lurui"));
-            //option.AddPolicy("仅限Claims",policy=>policy.RequireClaim("Edit Albums"));
-            //option.AddPolicy("仅限Claims", policy => policy.RequireAssertion(context =>
-            //   {
-            //       if (context.User.HasClaim(x => x.Type == "Edit Albums"))
-            //           return true;
-            //       return false;
-            //   }));
+                //option.AddPolicy("仅限Claims",policy=>policy.RequireClaim("Edit Albums"));
+                //option.AddPolicy("仅限Claims", policy => policy.RequireAssertion(context =>
+                //   {
+                //       if (context.User.HasClaim(x => x.Type == "Edit Albums"))
+                //           return true;
+                //       return false;
+                //   }));
+            
             option.AddPolicy("仅限qq邮箱", policy => policy.AddRequirements
              (
                  new EmailRequirement("@qq.com")
                 // new QualifiedUserRequirement("lurui")
                 ));
             });
+            #endregion
+
             //内存缓存
             services.AddMemoryCache();
 
