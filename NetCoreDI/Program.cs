@@ -10,7 +10,7 @@ namespace NetCoreDI
             Scoped();
             Console.ReadKey();
         }
-        //每次访问都是共用单一实例
+        //整个应用程序都是共用单一实例
         public static void Singleton()
         {
             var serviceCollection = new ServiceCollection();
@@ -50,7 +50,7 @@ namespace NetCoreDI
             Console.WriteLine($"tranisent2:{tranisent2.OperationId}");
             Console.WriteLine($"tranisent1==tranisent2:{tranisent1 == tranisent2}");
         }
-        //用Scope注册的对象，在同一个ServiceProvider的 Scope下相当于单例。
+        //用Scope注册的对象，在同一个请求()下的 Scope下相当于单例。 例如一个controller下面的action 里面的Scope注册的  一次请求获取的对象实例是相同的
         public static void Scoped()
         {
             var servicr = new ServiceCollection()
