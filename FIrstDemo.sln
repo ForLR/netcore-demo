@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurtionWrite", "ConfigurtionWrite\ConfigurtionWrite.csproj", "{24EE08C2-78A3-424E-A25D-838D9B384D0F}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtAuthSample", "JwtAuthSam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "identity", "identity\identity.csproj", "{CF891DAD-3246-411B-AE67-BDB8CC5B76A6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "用户管理", "用户管理\用户管理.csproj", "{A208B603-D8F9-4083-8F50-2BFD605DF4B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heavy", "Heavy\Heavy.csproj", "{A208B603-D8F9-4083-8F50-2BFD605DF4B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "EventBus\EventBus.csproj", "{E06A0389-6C42-47B2-9E6C-CFCD15328480}"
 EndProject
