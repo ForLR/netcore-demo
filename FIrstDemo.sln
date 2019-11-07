@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29209.62
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurtionWrite", "ConfigurtionWrite\ConfigurtionWrite.csproj", "{24EE08C2-78A3-424E-A25D-838D9B384D0F}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "EventBus\EventBus.csproj", "{E06A0389-6C42-47B2-9E6C-CFCD15328480}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{9D3578AA-D8BD-4366-B81E-9F50EF9F4D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kinds", "Kinds\Kinds.csproj", "{8C8AD5CD-FE94-482F-A948-F3B55C1EA746}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{9D3578AA-D8BD-4366-B81E-9F50EF9F4D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D3578AA-D8BD-4366-B81E-9F50EF9F4D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D3578AA-D8BD-4366-B81E-9F50EF9F4D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8AD5CD-FE94-482F-A948-F3B55C1EA746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8AD5CD-FE94-482F-A948-F3B55C1EA746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8AD5CD-FE94-482F-A948-F3B55C1EA746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8AD5CD-FE94-482F-A948-F3B55C1EA746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
